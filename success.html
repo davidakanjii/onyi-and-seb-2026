@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RSVP Confirmed | Onyi & Seb</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,400;1,600&family=Jost:wght@200;300;400&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  background: #1A1410;
+  min-height: 100vh;
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Jost', sans-serif;
+  font-weight: 300;
+  text-align: center;
+  padding: 20px;
+}
+.card {
+  max-width: 520px;
+  animation: fadeUp 0.8s ease both;
+}
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.ring { font-size: 3.5rem; margin-bottom: 24px; display: block; }
+.names {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 2.2rem;
+  color: #C9A84C;
+  margin-bottom: 8px;
+}
+.divider {
+  display: flex; align-items: center; justify-content: center; gap: 12px;
+  margin: 20px auto;
+}
+.divider-line { width: 50px; height: 1px; background: rgba(201,168,76,0.3); }
+.divider-diamond { width: 5px; height: 5px; background: #C9A84C; transform: rotate(45deg); }
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem; font-weight: 400; font-style: italic;
+  color: #fff;
+  margin-bottom: 16px;
+}
+p {
+  font-size: 1rem; color: rgba(255,255,255,0.5);
+  line-height: 1.8; margin-bottom: 12px;
+}
+.date {
+  display: inline-block;
+  border: 1px solid rgba(201,168,76,0.3);
+  color: #C9A84C;
+  font-size: 0.75rem; letter-spacing: 0.25em; text-transform: uppercase;
+  padding: 10px 24px;
+  margin: 20px 0 32px;
+}
+.back-btn {
+  display: inline-block;
+  background: #C9A84C;
+  color: #1A1410;
+  text-decoration: none;
+  padding: 14px 36px;
+  font-size: 0.75rem; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase;
+  font-family: 'Jost', sans-serif;
+  transition: background 0.3s;
+}
+.back-btn:hover { background: #E8C97A; }
+</style>
+</head>
+<body>
+<div class="card">
+  <span class="ring">💍</span>
+  <div class="names">Onyi & Seb</div>
+  <div class="divider">
+    <div class="divider-line"></div>
+    <div class="divider-diamond"></div>
+    <div class="divider-line"></div>
+  </div>
+  <h1>Your RSVP has been received!</h1>
+  <p>Thank you so much for confirming. We are absolutely thrilled to have you celebrate this special day with us.</p>
+  <p>We look forward to seeing you on the 9th of May 2026!</p>
+  <div class="date">9th May 2026 · Derby, England</div>
+  <br>
+  <a href="/" class="back-btn">← Back to the Wedding Site</a>
+</div>
+</body>
+</html>
