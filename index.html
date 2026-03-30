@@ -579,18 +579,7 @@ footer p { font-size: 0.75rem; color: rgba(255,255,255,0.25); letter-spacing: 0.
   <h2>Colour of the Day</h2>
   <div class="divider"><div class="divider-line"></div><div class="divider-diamond"></div><div class="divider-line"></div></div>
   <div class="color-section">
-    <p class="color-tagline">"A touch of gold"</p>
-    <div class="color-display">
-      <div class="color-block">
-        <span>Gold</span>
-      </div>
-      <div class="color-block">
-        <span>Dark &amp; Elegant</span>
-      </div>
-    </div>
-    <p style="margin-top: 32px; color: var(--muted); font-size: 0.9rem; max-width: 480px; margin-left: auto; margin-right: auto; line-height: 1.8;">
-      We invite you to dress in gold or complementary tones. Think champagne, bronze, ivory — anything that glitters.
-    </p>
+    <p class="color-tagline">A touch of gold</p>
   </div>
 </section>
 
@@ -673,7 +662,7 @@ footer p { font-size: 0.75rem; color: rgba(255,255,255,0.25); letter-spacing: 0.
       </div>
     </div>
 
-    <form class="rsvp-form" id="rsvpForm" onsubmit="handleRsvp(event)">
+    <form class="rsvp-form" id="rsvpForm" name="rsvp" method="POST" data-netlify="true" onsubmit="handleRsvp(event)">
       <div class="form-row">
         <div class="form-group">
           <label>Full Name</label>
@@ -766,12 +755,10 @@ function copyText(text) {
 
 // RSVP
 function handleRsvp(e) {
-  e.preventDefault();
+  // Let the form submit naturally to Netlify
   const btn = e.target.querySelector('.submit-btn');
-  btn.textContent = 'Confirmed! 💍';
-  btn.style.background = '#2D7A4F';
-  btn.style.color = '#fff';
-  setTimeout(() => { btn.textContent = 'Confirm My RSVP'; btn.style.background = ''; btn.style.color = ''; e.target.reset(); }, 3000);
+  btn.textContent = 'Submitting...';
+  btn.disabled = true;
 }
 
 // SMOOTH SCROLL
