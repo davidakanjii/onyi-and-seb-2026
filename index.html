@@ -669,7 +669,7 @@ footer p { font-size: 0.75rem; color: rgba(255,255,255,0.25); letter-spacing: 0.
       </div>
     </div>
 
-    <form class="rsvp-form" id="rsvpForm" name="rsvp" method="POST" data-netlify="true" onsubmit="handleRsvp(event)">
+    <form class="rsvp-form" name="rsvp" method="POST" data-netlify="true">
       <div class="form-row">
         <div class="form-group">
           <label>Full Name</label>
@@ -761,12 +761,7 @@ function copyText(text) {
 }
 
 // RSVP
-function handleRsvp(e) {
-  // Let the form submit naturally to Netlify
-  const btn = e.target.querySelector('.submit-btn');
-  btn.textContent = 'Submitting...';
-  btn.disabled = true;
-}
+// Form submits naturally to Netlify
 
 // SMOOTH SCROLL
 document.querySelectorAll('a[href^="#"]').forEach(a => {
